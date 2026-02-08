@@ -1,0 +1,85 @@
+POST http://localhost:3000/users/register
+Content-Type: application/json
+
+{
+    "name":"suresh",
+    "email":"sureshnayak6695@gmail.com",
+    "password":"Surya@413"
+}
+
+###
+POST http://localhost:3000/users/login
+Content-Type: application/json
+
+{
+    "email":"sureshnayak6695@gmail.com",
+    "password":"Surya@413"
+}
+
+###
+
+GET http://localhost:3000/users/profile
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzcwNDYyMzQ1fQ.uzamX2F7CMOQrh2wcbzoZUjGIPhAGWRTGkmBou_8mX0
+
+### 
+GET http://localhost:3000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzcwNDYyMzQ1fQ.uzamX2F7CMOQrh2wcbzoZUjGIPhAGWRTGkmBou_8mX0
+
+###
+POST http://localhost:3000/items
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzcwNDYyMzQ1fQ.uzamX2F7CMOQrh2wcbzoZUjGIPhAGWRTGkmBou_8mX0
+Content-Type: application/json
+
+  {
+    "name": "Office Chair",
+    "description": "Ergonomic adjustable office chair",
+    "price": 18000,
+    "image_url": "https://images.unsplash.com/photo-1598300056393-4aac492f4344"
+  }
+
+###  
+GET http://localhost:3000/items
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzcwNDYyMzQ1fQ.uzamX2F7CMOQrh2wcbzoZUjGIPhAGWRTGkmBou_8mX0
+
+###   
+GET http://localhost:3000/items/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzcwNDYyMzQ1fQ.uzamX2F7CMOQrh2wcbzoZUjGIPhAGWRTGkmBou_8mX0
+
+###   
+DELETE  http://localhost:3000/items/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzcwNDYyMzQ1fQ.uzamX2F7CMOQrh2wcbzoZUjGIPhAGWRTGkmBou_8mX0
+
+
+###   
+POST http://localhost:3000/carts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzcwNDYyMzQ1fQ.uzamX2F7CMOQrh2wcbzoZUjGIPhAGWRTGkmBou_8mX0
+Content-Type: application/json
+
+{
+  "items": [
+    { "item_id": 1, "quantity": 2 },
+    { "item_id": 2, "quantity": 1 }
+  ]
+}
+
+###   
+GET http://localhost:3000/carts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzcwNDYyMzQ1fQ.uzamX2F7CMOQrh2wcbzoZUjGIPhAGWRTGkmBou_8mX0
+
+
+###   
+POST http://localhost:3000/orders
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzcwNDYyMzQ1fQ.uzamX2F7CMOQrh2wcbzoZUjGIPhAGWRTGkmBou_8mX0
+Content-Type: application/json
+
+{
+  "cart_id": 1
+}
+
+###   
+GET http://localhost:3000/orders
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzcwNDYyMzQ1fQ.uzamX2F7CMOQrh2wcbzoZUjGIPhAGWRTGkmBou_8mX0
+
+
+
+
